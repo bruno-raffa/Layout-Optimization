@@ -14,9 +14,9 @@ A facility layout optimization model is presented that consists of four machines
 
 There are also a set of three products with pre-specified routings as shown below:
 
-P1: Receiving -> CNC -> Drill -> Punch -> Shipping
-P2: Receiving -> Mill -> Drill -> Punch -> Shipping
-P3: Receiving -> CNC -> Drill -> Mill -> Punch -> Shipping
+-P1: Receiving -> CNC -> Drill -> Punch -> Shipping
+-P2: Receiving -> Mill -> Drill -> Punch -> Shipping
+-P3: Receiving -> CNC -> Drill -> Mill -> Punch -> Shipping
 
 ### Objective
 The objective function is to minimize the total cost of material handling and cost of layout changes. The material handling cost is calculated using Euclidean distances between the locations of work centers and the routing that needs to be followed by each product family times the cost associated for a unit of movement. The cost of changes in the layout is calculated by summing the cost associated with moving each machine over the set of machines that are moved. ost of moving a machine is assumed to be \$300/distance and cost of material handling is \$100/distance.

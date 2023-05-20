@@ -2,11 +2,11 @@
 
 
 
-TIn the manufacturing field material handling is a necessary but costly activity. Increased material handling will create extra costs due to labor, machine and time requirements while possibly causing quality defects and increasing shop floor lead time. That is why often in practice the shop floor layouts are redesigned to minimize material handling related costs. Though making layout changes on the shop floor and moving machines also have associated costs. These costs are incurred since the production needs to be paused and labor hours are required to make the necessary changes to the layout.
+In the manufacturing field material handling is a necessary but costly activity. Increased material handling will create extra costs due to labor, machine and time requirements while possibly causing quality defects and increasing shop floor lead time. That is why often in practice the shop floor layouts are redesigned to minimize material handling related costs. Though making layout changes on the shop floor and moving machines also have associated costs. These costs are incurred since the production needs to be paused and labor hours are required to make the necessary changes to the layout.
 
 This real life layout redesign decision can be modeled and solved as an optimization problem. The objective would be to minimize all costs including cost of making layout changes and cost of material handling.
 
-The problem is defined here is defined here: https://miro.neos-server.org/app/facloc
+The problem is defined here: https://miro.neos-server.org/app/facloc
 
 The approach used here involves using a Constrained Quadratic Model (CQM).  The solution is computed using the LeapHybridCQMSampler.
 
@@ -14,9 +14,9 @@ A facility layout optimization model is presented that consists of four machines
 
 There are also a set of three products with pre-specified routings as shown below:
 
--P1: Receiving -> CNC -> Drill -> Punch -> Shipping
--P2: Receiving -> Mill -> Drill -> Punch -> Shipping
--P3: Receiving -> CNC -> Drill -> Mill -> Punch -> Shipping
+- P1: Receiving -> CNC -> Drill -> Punch -> Shipping
+- P2: Receiving -> Mill -> Drill -> Punch -> Shipping
+- P3: Receiving -> CNC -> Drill -> Mill -> Punch -> Shipping
 
 ### Objective
 The objective function is to minimize the total cost of material handling and cost of layout changes. The material handling cost is calculated using Euclidean distances between the locations of work centers and the routing that needs to be followed by each product family times the cost associated for a unit of movement. The cost of changes in the layout is calculated by summing the cost associated with moving each machine over the set of machines that are moved. ost of moving a machine is assumed to be \$300/distance and cost of material handling is \$100/distance.

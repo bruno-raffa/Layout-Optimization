@@ -8,7 +8,7 @@ This real life layout redesign decision can be modeled and solved as an optimiza
 
 The problem is defined here: https://miro.neos-server.org/app/facloc
 
-The approach used here involves using a Constrained Quadratic Model (CQM).  The solution is computed using the LeapHybridCQMSampler.
+The approach used here involves using a Constrained Quadratic Model (CQM) from Dwave (https://cloud.dwavesys.com/). The solution is computed using the LeapHybridCQMSampler 
 
 A facility layout optimization model is presented that consists of four machines: CNC, Mill, Drill, and Punch. These machines are the most common machines in any manufacturing facility.
 

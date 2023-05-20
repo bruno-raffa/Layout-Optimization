@@ -8,9 +8,9 @@ This real life layout redesign decision can be modeled and solved as an optimiza
 
 The problem is defined here: https://miro.neos-server.org/app/facloc
 
-The approach used here involves using a Constrained Quadratic Model (CQM) from Dwave (https://cloud.dwavesys.com/). The solution is computed using the LeapHybridCQMSampler 
+The approach used here involves the use of a Constrained Quadratic Model (CQM) from Dwave (https://cloud.dwavesys.com/). The solution is computed using the LeapHybridCQMSampler 
 
-A facility layout optimization model is presented that consists of four machines: CNC, Mill, Drill, and Punch. These machines are the most common machines in any manufacturing facility.
+A facility layout optimization model is presented, it consists of four machines: CNC, Mill, Drill, and Punch. These machines are the most common machines in any manufacturing facility.
 
 There are also a set of three products with pre-specified routings as shown below:
 
@@ -19,7 +19,8 @@ There are also a set of three products with pre-specified routings as shown belo
 - P3: Receiving -> CNC -> Drill -> Mill -> Punch -> Shipping
 
 ### Objective
-The objective function is to minimize the total cost of material handling and cost of layout changes. The material handling cost is calculated using Euclidean distances between the locations of work centers and the routing that needs to be followed by each product family times the cost associated for a unit of movement. The cost of changes in the layout is calculated by summing the cost associated with moving each machine over the set of machines that are moved. ost of moving a machine is assumed to be \$300/distance and cost of material handling is \$100/distance.
+The objective function is to minimize the total cost of material handling and cost of layout changes. The material handling cost is calculated using Euclidean distances between the locations of work centers and the routing that needs to be followed by each product family times the cost associated for a unit of movement. 
+The cost of changes in the layout is calculated by summing the cost associated with moving each machine over the set of machines that are moved. ost of moving a machine is assumed to be \$300/distance and cost of material handling is \$100/distance.
 Due to the fact that the objective function is composed of two conflicting parts, two weigh coeffecients must be set to prevent the calculation to be too sweked towards one. These value can, in their turn, be optimized by trial and error.
 
 ### Constraints
